@@ -21,14 +21,14 @@ export const AppContainer = styled.div`
   background-size: cover;
 
   @media screen and (min-width: 768px) {
-    background: ${({ $hour }) =>
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), ${({ $hour }) =>
       $hour < 18 ? `url("${bgDayTablet}")` : `url("${bgNightTablet}")`};
     background-size: cover;
     padding: 64px;
   }
 
   @media screen and (min-width: 1440px) {
-    background: ${({ $hour }) =>
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), ${({ $hour }) =>
       $hour < 18 ? `url("${bgDayDesktop}")` : `url("${bgNightDesktop}")`};
     background-size: cover;
     padding: 64px 165px;
