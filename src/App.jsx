@@ -15,6 +15,7 @@ export const App = () => {
   useEffect(() => {
     fetchTime();
     fetchQuote();
+    fetchIP();
   }, [])
 
   return (

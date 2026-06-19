@@ -19,6 +19,12 @@ export const MoreInfoContainer = styled.div`
     grid-auto-flow: column;
   }
 
+  
+  @media screen and (min-width: 1200px) {
+    margin: -64px -165px;
+    height: 250px;
+  }
+
   @media screen and (min-width: 1440px) {
     margin: -64px -165px;
     height: 400px;

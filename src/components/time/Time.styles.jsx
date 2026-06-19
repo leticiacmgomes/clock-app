@@ -4,15 +4,16 @@ import iconSun from "../../assets/desktop/icon-sun.svg";
 import iconMoon from "../../assets/desktop/icon-moon.svg";
 
 export const TimeContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    gap: 64px;
-     @media screen and (min-width: 1440px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: end;
-     }
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  gap: 64px;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
 `;
 
 export const Greeting = styled.span`
@@ -45,6 +46,10 @@ export const CurrentTime = styled.span`
 `;
 
 export const Location = styled.span`
-    font-size: 15px;
-    font-weight: 700;
+  font-size: 15px;
+  font-weight: 700;
+ 
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;

@@ -16,6 +16,7 @@ export const MoreButtonContainer = styled.div`
   align-items: center;
   gap: 15px;
   color: #000000;
+  cursor: pointer;
 `;
 
 export const IconArrow = styled.div`
