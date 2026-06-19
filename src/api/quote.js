@@ -8,7 +8,7 @@ export const getQuote = async () => {
         language_code: 'en'
     },
     headers: {
-        'x-rapidapi-key': '33dad84244mshc17e49e89ccd7d2p142ac3jsn57f967495927',
+        'x-rapidapi-key': import.meta.env.VITE_API_KEY_QUOTE,
             'x-rapidapi-host': 'quotes15.p.rapidapi.com',
                 'Content-Type': 'application/json'
     }
