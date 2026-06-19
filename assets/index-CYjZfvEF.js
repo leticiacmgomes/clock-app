@@ -29,13 +29,13 @@ Error generating stack: `+e.message+`
   background-size: cover;
 
   @media screen and (min-width: 768px) {
-    background: ${({$hour:e})=>e<18?`url("${Co}")`:`url("${wo}")`};
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), ${({$hour:e})=>e<18?`url("${Co}")`:`url("${wo}")`};
     background-size: cover;
     padding: 64px;
   }
 
   @media screen and (min-width: 1440px) {
-    background: ${({$hour:e})=>e<18?`url("${To}")`:`url("${Eo}")`};
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), ${({$hour:e})=>e<18?`url("${To}")`:`url("${Eo}")`};
     background-size: cover;
     padding: 64px 165px;
   }
