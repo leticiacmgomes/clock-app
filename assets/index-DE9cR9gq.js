@@ -68,6 +68,7 @@ Error generating stack: `+e.message+`
   align-items: center;
   gap: 15px;
   color: #000000;
+  cursor: pointer;
 `,Fo=xo.div`
   width: 40px;
   height: 40px;
@@ -76,15 +77,16 @@ Error generating stack: `+e.message+`
     no-repeat center #303030;
     
 `,Io=()=>{let e=(0,mr.c)(6),{isMoreActive:t,toggleMore:n}=wr(),r=t?`less`:`more`,i;e[0]===t?i=e[1]:(i=(0,U.jsx)(Fo,{$isMoreActive:t}),e[0]=t,e[1]=i);let a;return e[2]!==r||e[3]!==i||e[4]!==n?(a=(0,U.jsxs)(Po,{onClick:n,children:[r,i]}),e[2]=r,e[3]=i,e[4]=n,e[5]=a):a=e[5],a},Lo=`data:image/svg+xml,%3csvg%20width='24'%20height='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.78%2019.417c.594%200%201.083.449%201.146%201.026l.006.125v1.842a1.152%201.152%200%2001-2.296.125l-.007-.125v-1.842c0-.636.516-1.151%201.152-1.151zM6.382%2017.18a1.15%201.15%200%2001.09%201.527l-.09.1-1.302%201.303a1.152%201.152%200%2001-1.718-1.528l.09-.1%201.302-1.302a1.15%201.15%200%20011.628%200zm12.427%200l1.303%201.303a1.15%201.15%200%2011-1.628%201.627L17.18%2018.81a1.15%201.15%200%20111.628-1.628zM11.781%205.879a5.908%205.908%200%20015.901%205.902%205.908%205.908%200%2001-5.901%205.902%205.908%205.908%200%2001-5.902-5.902%205.908%205.908%200%20015.902-5.902zm10.63%204.75a1.151%201.151%200%20110%202.303h-1.843a1.151%201.151%200%20110-2.303h1.842zm-19.418%200a1.151%201.151%200%2001.126%202.296l-.125.007H1.15a1.151%201.151%200%2001-.125-2.296l.125-.007h1.842zm1.985-7.268l.1.09%201.303%201.302a1.151%201.151%200%2001-1.528%201.718l-.1-.09L3.45%205.08A1.15%201.15%200%20014.978%203.36zm15.133.09c.45.449.45%201.178%200%201.628L18.808%206.38a1.151%201.151%200%2011-1.628-1.628l1.303-1.303c.449-.449%201.178-.449%201.628%200zM11.781%200c.636%200%201.151.515%201.151%201.151v1.843a1.152%201.152%200%2001-2.303%200V1.15C10.63.515%2011.145%200%2011.781%200z'%20fill='%23FFF'%20fill-rule='nonzero'/%3e%3c/svg%3e`,Ro=`data:image/svg+xml,%3csvg%20width='23'%20height='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.157%2017.366a.802.802%200%2000-.891-.248%208.463%208.463%200%2001-2.866.482c-4.853%200-8.8-3.949-8.8-8.8a8.773%208.773%200%20013.856-7.274.801.801%200%2000-.334-1.454A7.766%207.766%200%200012%200C5.382%200%200%205.382%200%2012s5.382%2012%2012%2012c4.2%200%208.02-2.134%2010.218-5.709a.805.805%200%2000-.061-.925z'%20fill='%23FFF'%20fill-rule='nonzero'/%3e%3c/svg%3e`,zo=xo.div`
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    gap: 64px;
-     @media screen and (min-width: 1440px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: end;
-     }
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  gap: 64px;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
 `,Bo=xo.span`
   padding-left: 30px;
   background: ${({$hour:e})=>e<18?`url("${Lo}")`:`url("${Ro}")`}
@@ -108,8 +110,12 @@ Error generating stack: `+e.message+`
     font-size: 200px;
   }
 `,Uo=xo.span`
-    font-size: 15px;
-    font-weight: 700;
+  font-size: 15px;
+  font-weight: 700;
+ 
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `,Wo=()=>{let e=(0,mr.c)(15),{time:t,ip:n}=wr(),r,i;if(e[0]!==t?.datetime){let n=new Date(t?.datetime);r=n.getHours(),i=n.getMinutes(),e[0]=t?.datetime,e[1]=r,e[2]=i}else r=e[1],i=e[2];let a=i,o=n?.data.location,s;e[3]!==r||e[4]!==a||e[5]!==t?(s=t?(0,U.jsxs)(U.Fragment,{children:[(0,U.jsxs)(Bo,{$hour:r,children:[r<12?`good morning`:r<18?`good afternoon`:r<22?`good evening`:`good night`,(0,U.jsx)(Vo,{children:`, it's currently`})]}),(0,U.jsxs)(Ho,{children:[r,`:`,a<10?`0${a}`:a]})]}):(0,U.jsx)(`p`,{children:`loading`}),e[3]=r,e[4]=a,e[5]=t,e[6]=s):s=e[6];let c;e[7]===o?c=e[8]:(c=o&&(0,U.jsxs)(Uo,{children:[`in `,o.city.name,` , `,o.country.alpha2]}),e[7]=o,e[8]=c);let l;e[9]!==s||e[10]!==c?(l=(0,U.jsxs)(`div`,{children:[s,c]}),e[9]=s,e[10]=c,e[11]=l):l=e[11];let u;e[12]===Symbol.for(`react.memo_cache_sentinel`)?(u=(0,U.jsx)(Io,{}),e[12]=u):u=e[12];let d;return e[13]===l?d=e[14]:(d=(0,U.jsxs)(zo,{children:[l,u]}),e[13]=l,e[14]=d),d},Go=xo.div`
   background: #ffffffbf;
   backdrop-filter: blur(40.774227142333984px);
@@ -127,6 +133,12 @@ Error generating stack: `+e.message+`
     row-gap: 40px;
     height: 430px;
     grid-auto-flow: column;
+  }
+
+  
+  @media screen and (min-width: 1200px) {
+    margin: -64px -165px;
+    height: 250px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -161,4 +173,4 @@ Error generating stack: `+e.message+`
   @media screen and (min-width: 1440px) {
     font-size: 56px;
   }
-`,Yo=()=>{let e=(0,mr.c)(20),{time:t}=wr(),n;e[0]===t.timezone?n=e[1]:(n=t.timezone.replace(`_`,` `),e[0]=t.timezone,e[1]=n);let r;e[2]===n?r=e[3]:(r={label:`current timezone`,info:n},e[2]=n,e[3]=r);let i;e[4]===t.day_of_year?i=e[5]:(i={label:`day of the year`,info:t.day_of_year},e[4]=t.day_of_year,e[5]=i);let a;e[6]===t.day_of_week?a=e[7]:(a={label:`day of the week`,info:t.day_of_week},e[6]=t.day_of_week,e[7]=a);let o;e[8]===t.week_number?o=e[9]:(o={label:`week number`,info:t.week_number},e[8]=t.week_number,e[9]=o);let s;e[10]!==r||e[11]!==i||e[12]!==a||e[13]!==o?(s=[r,i,a,o],e[10]=r,e[11]=i,e[12]=a,e[13]=o,e[14]=s):s=e[14];let c=s,l;e[15]!==c||e[16]!==t?(l=t&&(0,U.jsx)(U.Fragment,{children:c.map(Xo)}),e[15]=c,e[16]=t,e[17]=l):l=e[17];let u;return e[18]===l?u=e[19]:(u=(0,U.jsx)(Go,{children:l}),e[18]=l,e[19]=u),u};function Xo(e){return(0,U.jsxs)(Ko,{children:[(0,U.jsx)(qo,{children:e.label}),(0,U.jsx)(Jo,{children:e.info})]})}(0,y.createRoot)(document.getElementById(`root`)).render((0,U.jsx)(v.StrictMode,{children:(0,U.jsx)(()=>{let e=(0,mr.c)(13),{fetchTime:t,fetchQuote:n,time:r,isMoreActive:i}=wr(),a;e[0]===r?a=e[1]:(a=r?new Date(r.datetime).getHours():null,e[0]=r,e[1]=a);let o=a,s;e[2]!==n||e[3]!==t?(s=()=>{t(),n()},e[2]=n,e[3]=t,e[4]=s):s=e[4];let c;e[5]===Symbol.for(`react.memo_cache_sentinel`)?(c=[],e[5]=c):c=e[5],(0,v.useEffect)(s,c);let l,u;e[6]===Symbol.for(`react.memo_cache_sentinel`)?(l=(0,U.jsx)(jo,{}),u=(0,U.jsx)(Wo,{}),e[6]=l,e[7]=u):(l=e[6],u=e[7]);let d;e[8]===i?d=e[9]:(d=i&&(0,U.jsx)(Yo,{}),e[8]=i,e[9]=d);let f;return e[10]!==o||e[11]!==d?(f=(0,U.jsxs)(Do,{$hour:o,children:[l,u,d]}),e[10]=o,e[11]=d,e[12]=f):f=e[12],f},{})}));
+`,Yo=()=>{let e=(0,mr.c)(20),{time:t}=wr(),n;e[0]===t.timezone?n=e[1]:(n=t.timezone.replace(`_`,` `),e[0]=t.timezone,e[1]=n);let r;e[2]===n?r=e[3]:(r={label:`current timezone`,info:n},e[2]=n,e[3]=r);let i;e[4]===t.day_of_year?i=e[5]:(i={label:`day of the year`,info:t.day_of_year},e[4]=t.day_of_year,e[5]=i);let a;e[6]===t.day_of_week?a=e[7]:(a={label:`day of the week`,info:t.day_of_week},e[6]=t.day_of_week,e[7]=a);let o;e[8]===t.week_number?o=e[9]:(o={label:`week number`,info:t.week_number},e[8]=t.week_number,e[9]=o);let s;e[10]!==r||e[11]!==i||e[12]!==a||e[13]!==o?(s=[r,i,a,o],e[10]=r,e[11]=i,e[12]=a,e[13]=o,e[14]=s):s=e[14];let c=s,l;e[15]!==c||e[16]!==t?(l=t&&(0,U.jsx)(U.Fragment,{children:c.map(Xo)}),e[15]=c,e[16]=t,e[17]=l):l=e[17];let u;return e[18]===l?u=e[19]:(u=(0,U.jsx)(Go,{children:l}),e[18]=l,e[19]=u),u};function Xo(e){return(0,U.jsxs)(Ko,{children:[(0,U.jsx)(qo,{children:e.label}),(0,U.jsx)(Jo,{children:e.info})]})}(0,y.createRoot)(document.getElementById(`root`)).render((0,U.jsx)(v.StrictMode,{children:(0,U.jsx)(()=>{let e=(0,mr.c)(14),{fetchTime:t,fetchQuote:n,fetchIP:r,time:i,isMoreActive:a}=wr(),o;e[0]===i?o=e[1]:(o=i?new Date(i.datetime).getHours():null,e[0]=i,e[1]=o);let s=o,c;e[2]!==r||e[3]!==n||e[4]!==t?(c=()=>{t(),n(),r()},e[2]=r,e[3]=n,e[4]=t,e[5]=c):c=e[5];let l;e[6]===Symbol.for(`react.memo_cache_sentinel`)?(l=[],e[6]=l):l=e[6],(0,v.useEffect)(c,l);let u,d;e[7]===Symbol.for(`react.memo_cache_sentinel`)?(u=(0,U.jsx)(jo,{}),d=(0,U.jsx)(Wo,{}),e[7]=u,e[8]=d):(u=e[7],d=e[8]);let f;e[9]===a?f=e[10]:(f=a&&(0,U.jsx)(Yo,{}),e[9]=a,e[10]=f);let p;return e[11]!==s||e[12]!==f?(p=(0,U.jsxs)(Do,{$hour:s,children:[u,d,f]}),e[11]=s,e[12]=f,e[13]=p):p=e[13],p},{})}));
