@@ -2,6 +2,7 @@ import { useClockStore } from "../../store/clockStore";
 import { MoreButton } from "../moreButton/MoreButton";
 import {
   TimeContainer,
+  TimeTextContainer,
   Greeting,
   CurrentTime,
   Location,
@@ -17,7 +18,7 @@ export const Time = () => {
 
   return (
     <TimeContainer>
-      <div>
+      <TimeTextContainer>
         {time ? (
           <>
             <Greeting $hour={hour}>
@@ -42,7 +43,7 @@ export const Time = () => {
             in {location.city.name} , {location.country.alpha2}
           </Location>
         )}
-      </div>
+      </TimeTextContainer>
       <MoreButton />
     </TimeContainer>
   );

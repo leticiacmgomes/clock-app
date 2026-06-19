@@ -16,6 +16,10 @@ export const TimeContainer = styled.div`
   }
 `;
 
+export const TimeTextContainer = styled.div`
+  display: grid;
+`;
+
 export const Greeting = styled.span`
   padding-left: 30px;
   background: ${({ $hour }) =>
